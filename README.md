@@ -23,7 +23,7 @@ Particle Auth Core, a component of Particle Network's Wallet-as-a-Service, enabl
 ##
 
 <p align="center">
-  <a href="https://vercel.com/new/clone?repository-url=https://github.com/TABASCOatw/particle-web3modal-boilerplate&env=REACT_APP_PROJECT_ID&env=REACT_APP_CLIENT_KEY&env=REACT_APP_APP_ID&env=REACT_APP_WALLETCONNECT_PROJECT_ID&envDescription=Head%20over%20to%20the%20Particle%20dashboard%20to%20retrieve%20the%20above%20keys.&envLink=https%3A%2F%2Fdashboard.particle.network">
+  <a href="https://vercel.com/new/clone?repository-url=https://github.com/jplsaez/particle-web3modal-boilerplate&env=REACT_APP_PROJECT_ID&env=REACT_APP_CLIENT_KEY&env=REACT_APP_APP_ID&env=REACT_APP_WALLETCONNECT_PROJECT_ID&envDescription=Head%20over%20to%20the%20Particle%20dashboard%20to%20retrieve%20the%20above%20keys.&envLink=https%3A%2F%2Fdashboard.particle.network">
     <img src="https://vercel.com/button" alt="Deploy with Vercel"/>
   </a>
 </p>
