@@ -1,10 +1,15 @@
 import { AuthCoreContextProvider } from '@particle-network/auth-core-modal';
-import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
+//import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
+import { createAppKit } from '@reown/appkit/react';
+import { EthersAdapter } from '@reown/appkit-adapter-ethers';
 import { type ReactNode } from 'react';
+import { mainnet, goerli } from '@reown/appkit/networks'
+
 
 // 1. Get projectId at https://cloud.walletconnect.com
 const projectId = import.meta.env.REACT_APP_WALLETCONNECT_PROJECT_ID;
 
+/*
 // 2. Set chains
 const mainnet = {
     chainId: 1,
@@ -21,6 +26,7 @@ const goerli = {
     explorerUrl: 'https://goerli.etherscan.io',
     rpcUrl: 'https://ethereum-goerli.publicnode.com',
 };
+*/
 
 // 3. Create modal
 const metadata = {
@@ -30,12 +36,24 @@ const metadata = {
     icons: ['https://avatars.mywebsite.com/'],
 };
 
+const web3Modal = createAppKit({
+	adapters: [new EthersAdapter()],
+    networks: [mainnet, goerli],
+	projectId,
+	metadata,
+	features: {
+		analytics: true // Optional - defaults to your Cloud configuration
+	}
+});
+
+/*
 const web3Modal = createWeb3Modal({
     ethersConfig: defaultConfig({ metadata }),
     chains: [mainnet, goerli],
     projectId,
     enableAnalytics: true,
 });
+*/
 
 const ParticleProvider = ({ children }: { children: ReactNode }) => {
     return (
