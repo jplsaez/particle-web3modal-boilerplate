@@ -3,7 +3,7 @@ import { createWeb3Modal, defaultConfig } from '@web3modal/ethers/react';
 import { type ReactNode } from 'react';
 
 // 1. Get projectId at https://cloud.walletconnect.com
-const projectId = process.env.REACT_APP_WALLETCONNECT_PROJECT_ID;
+const projectId = import.meta.env.REACT_APP_WALLETCONNECT_PROJECT_ID;
 
 // 2. Set chains
 const mainnet = {
@@ -41,9 +41,9 @@ const ParticleProvider = ({ children }: { children: ReactNode }) => {
     return (
         <AuthCoreContextProvider
             options={{
-                projectId: process.env.REACT_APP_PROJECT_ID,
-                clientKey: process.env.REACT_APP_CLIENT_KEY,
-                appId: process.env.REACT_APP_APP_ID,
+                projectId: import.meta.env.REACT_APP_PROJECT_ID,
+                clientKey: import.meta.env.REACT_APP_CLIENT_KEY,
+                appId: import.meta.env.REACT_APP_APP_ID,
                 web3Modal,
             }}
         >
